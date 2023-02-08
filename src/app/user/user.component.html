@@ -3,23 +3,15 @@
   <table class="user-table">
 
     <tr>
-
       <th>Name</th>
       <th>E-mail</th>
       <th>City</th>
-
     </tr>
 
-    <tr>
-      <td>asdasd</td>
-      <td>asdasd</td>
-      <td>asdasd</td>
-    </tr>
-
-    <tr>
-      <td>asdasd</td>
-      <td>asdasd</td>
-      <td>asdasd</td>
+    <tr *ngFor="let user of allUsers">
+      <td>{{user.firstName}} {{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.city}}</td>
     </tr>
 
   </table>
