@@ -75,7 +75,7 @@
     </div>
 
     <div class="add-user-btns" mat-dialog-actions>
-        <button mat-button>Cancel</button>
+        <button (click)="dialogRef.close()" mat-button>Cancel</button>
         <button mat-button (click)="saveUser()" cdkFocusInitial>Save</button>
     </div>
 

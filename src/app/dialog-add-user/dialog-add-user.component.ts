@@ -32,7 +32,6 @@ export class DialogAddUserComponent {
       console.log('Adding user in firebase', result);
       this.dialogRef.close();
     })
-    
   }
 
 }
