@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { User } from 'src/models/user.class';
 
 @Component({
@@ -8,4 +9,18 @@ import { User } from 'src/models/user.class';
 })
 export class DialogEditUserComponent {
 
+  user: User;
+  birthDate: Date;
+  loading: boolean = false;
+
+
+  constructor(public dialogRef: MatDialogRef<DialogEditUserComponent>){
+    console.log(this.birthDate);
+    
+  }
+
+
+  saveUser() {
+
+  }
 }
