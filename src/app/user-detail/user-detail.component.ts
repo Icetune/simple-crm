@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/models/user.class';
+import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
+import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
 
 @Component({
   selector: 'app-user-detail',
@@ -13,7 +16,7 @@ export class UserDetailComponent {
   userID = '';
   user: User = new User;
 
-  constructor(private route: ActivatedRoute, private firestore: AngularFirestore) {
+  constructor(public dialog: MatDialog, private route: ActivatedRoute, private firestore: AngularFirestore) {
 
     this.route.paramMap.subscribe(paramMap => {
       this.userID = paramMap.get('id');
@@ -33,6 +36,14 @@ export class UserDetailComponent {
         this.user = new User (user);
         console.log('Retrieved user', this.user);
       })
+  }
+
+  editAdress() {
+    this.dialog.open(DialogEditAddressComponent);
+  }
+
+  editUserDetail() {
+    this.dialog.open(DialogEditUserComponent);
   }
 
 }
