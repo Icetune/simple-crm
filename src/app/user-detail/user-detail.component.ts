@@ -35,4 +35,9 @@ export class UserDetailComponent {
       })
   }
 
+
+  openAddressDialog() {
+    
+  }
+
 }
