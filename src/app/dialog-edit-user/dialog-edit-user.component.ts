@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from 'src/models/user.class';
 
 @Component({
   selector: 'app-dialog-edit-user',
