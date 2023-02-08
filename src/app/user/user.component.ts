@@ -23,7 +23,7 @@ export class UserComponent implements OnInit {
     this
     .firestore
     .collection('users')
-    .valueChanges()                       
+    .valueChanges({idField: 'userID'})                       
     .subscribe((changes: any) => {
       console.log('Recived changes from DB', changes);
       this.allUsers = changes;
