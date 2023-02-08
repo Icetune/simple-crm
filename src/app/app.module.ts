@@ -30,6 +30,7 @@ import { FormsModule } from '@angular/forms';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     FormsModule,
     MatProgressBarModule,
     MatCardModule,
+    MatMenuModule,
 
 
     AngularFireModule.initializeApp(environment.firebase),
